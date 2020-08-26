@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <base href="https://tricksplit.io/">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="shortcut icon" href="https://tricksplit.io/favicon.png" />
+    <link rel="manifest" href="https://tricksplit.io/manifest.json" />
+    <title>TrickSplit.io - The Best Agario Unblocked io Private Server.</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinyColorPicker/1.1.1/jqColorPicker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script async defer="defer" src="https://apis.google.com/js/api.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125786454-14"></script>
+    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-125786454-14") </script>
+    <link href="https://tricksplit.io/static/css/vendor.efd8bab0.css" rel="stylesheet">
+    <link href="https://tricksplit.io/static/css/main.0c0b3565.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app"></div><noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="game" style="display:none">
+        <div id="leaderboard"><span id="lbTitle">TrickSplit.io</span>
+            <div id="lb"><span class="pos">1.</span> <span class="pos">2.</span> <span class="pos">3.</span> <span class="pos">4.</span> <span class="pos">5.</span> <span class="pos">6.</span> <span class="pos">7.</span> <span class="pos">8.</span> <span class="pos">9.</span> <span class="pos">10.</span></div>
+        </div>
+        <div id="minimap">
+            <div class="data">
+                <div class="row">
+                    <div class="sector">A1</div>
+                    <div class="sector">A2</div>
+                    <div class="sector">A3</div>
+                    <div class="sector">A4</div>
+                    <div class="sector">A5</div>
+                </div>
+                <div class="row">
+                    <div class="sector">B1</div>
+                    <div class="sector">B2</div>
+                    <div class="sector">B3</div>
+                    <div class="sector">B4</div>
+                    <div class="sector">B5</div>
+                </div>
+                <div class="row">
+                    <div class="sector">C1</div>
+                    <div class="sector">C2</div>
+                    <div class="sector">C3</div>
+                    <div class="sector">C4</div>
+                    <div class="sector">C5</div>
+                </div>
+                <div class="row">
+                    <div class="sector">D1</div>
+                    <div class="sector">D2</div>
+                    <div class="sector">D3</div>
+                    <div class="sector">D4</div>
+                    <div class="sector">D5</div>
+                </div>
+                <div class="row">
+                    <div class="sector">E1</div>
+                    <div class="sector">E2</div>
+                    <div class="sector">E3</div>
+                    <div class="sector">E4</div>
+                    <div class="sector">E5</div>
+                </div>
+            </div><canvas id="minimapNodes"></canvas>
+        </div>
+        <div class="chatType" id="global"><span class="active">GLOBAL</span></div>
+        <div class="chatType" id="party"><span>PARTY</span></div>
+        <div id="chatbox">
+            <div class="chatContent">
+                <div class="chatMessages" id="globalChat"></div>
+                <div class="chatMessages" id="partyChat"></div><input placeholder="Press ENTER to type..." class="chatInput" maxlength="64" />
+            </div>
+        </div>
+        <div id="score">Score: 0</div>
+        <div class="customText">TrickSplit.io</div>
+        <div class="replayControls">
+            <div>
+                <div id="replayPacket">Packet 0 / 0</div>
+                <div id="replayPaused">PAUSED: FALSE</div>
+            </div><input type="range" value="0" min="0" max="1000" step="1" />
+        </div>
+        <div class="party">
+            <div class="partyData">Total Mass: <span id="totalMass">0</span></div>
+            <div class="partyPeople"></div><button class="leaveParty">Leave</button>
+        </div>
+        <div class="invite">
+            <div><span class="inviteName"></span> has invited you to his party</div><button class="accept">Accept</button> <button class="decline">Decline</button>
+        </div>
+        <div class="userOptions">
+            <div class="userOptionName">
+                <p>Unnamed</p>
+            </div>
+            <div class="userDivider"></div>
+            <div class="uO userOptionOne">
+                <p>Invite to Party</p>
+            </div>
+            <div class="userDivider"></div>
+            <div class="uO userOptionTwo">
+                <p>Mute User</p>
+            </div>
+            <div class="uO userOptionThree">
+                <p>Block User</p>
+            </div>
+            <div class="adminOption userDivider"></div>
+            <div class="adminOption uO userOptionFour">
+                <p>Server Mute User</p>
+            </div>
+            <div class="adminOption uO userOptionFive">
+                <p>Server Kick User</p>
+            </div>
+            <div class="adminOption uO userOptionSix">
+                <p>Server Ban User</p>
+            </div>
+            <div class="adminOption userDivider"></div>
+            <div class="adminOption uO userOptionSeven">
+                <p>User Google ID</p>
+            </div>
+            <div class="adminOption uO userOptionLast">
+                <p>User IP Address</p>
+            </div>
+        </div>
+    </div><canvas id="canvas"></canvas>
+    <script src="https://tricksplit.io/yoar.min.js"></script>
+    <script src="https://tricksplit.io/config.js?v=2"></script>
+    <div id="measuring"></div><svg height="0" width="0">
+        <filter id="hue-rotate">
+            <feColorMatrix in="SourceGraphic" id="matrix" type="matrix" color-interpolation-filters="sRGB" />
+        </filter>
+    </svg>
+    <script type="text/javascript" src="https://tricksplit.io/static/js/vendor.2e66e136.js"></script>
+    <script type="text/javascript" src="https://tricksplit.io/static/js/main.39cdeba8.js"></script>
+</body>
+
+</html>
